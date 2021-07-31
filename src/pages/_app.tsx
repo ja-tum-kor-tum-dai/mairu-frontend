@@ -9,6 +9,9 @@ setup({
       fontFamily: {
         sans: 'Charm, cursive',
       },
+      lineHeight: {
+        loose: '2.5',
+      },
     },
   },
 })
