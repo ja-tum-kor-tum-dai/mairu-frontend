@@ -23,7 +23,7 @@ export default css.global`
     height: 600%;
     top: -250%;
     left: -250%;
-    animation: rotating-gradient 15s linear infinite;
+    animation: rotating-gradient 20s linear infinite;
     z-index: -1;
   }
 
@@ -41,6 +41,6 @@ export default css.global`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 64px;
+    height: 100px;
   }
 `

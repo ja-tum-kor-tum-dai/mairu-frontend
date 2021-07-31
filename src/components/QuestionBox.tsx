@@ -2,6 +2,13 @@ import Image from 'next/image'
 import prodiumPic from '../../public/images/tribune.png'
 import { tw } from 'twind'
 import { useState, Dispatch, SetStateAction } from 'react'
+import {
+  container,
+  textTitle,
+  textInput,
+  textSubmit,
+  formSubmitButton,
+} from '../styles/components'
 
 interface QuestionBoxProp {
   setAnswer: Dispatch<SetStateAction<string>>
@@ -11,7 +18,7 @@ const QuestionBox = ({ setAnswer }: QuestionBoxProp) => {
   const [question, setQuestion] = useState('')
 
   return (
-    <div className={tw`flex flex-col justify-center items-center px-6`}>
+    <div className={tw`${container}`}>
       <div className={tw`mb-7`}>
         <Image
           src={prodiumPic}
@@ -22,26 +29,24 @@ const QuestionBox = ({ setAnswer }: QuestionBoxProp) => {
         />
       </div>
 
-      <h1 className={tw`text-5xl text-center`}>
-        ท่านขึ้นโพเดียมแล้ว เชิญนักข่าวถาม
-      </h1>
+      <h1 className={tw`${textTitle}`}>ท่านขึ้นโพเดียมแล้ว เชิญนักข่าวถาม</h1>
 
       <input
-        className={tw`py-3 px-2 border mt-5 w-3/5 text-lg font-serif`}
+        className={tw`py-3 px-2 border mt-5 w-4/5 ${textInput}`}
         type="text"
         placeholder="เมื่อไหร่จะได้วัคซีน ?"
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
       />
 
-      <div className={tw`my-5`}>
+      <div className={tw`my-5 flex`}>
         <button
-          className={tw`bg-gradient-to-r from-blue-200 to-pink-200 text-2xl py-4 px-6 rounded mx-3 shadow border-1 border-gray-600 hover:shadow-xl hover:text-gray-600`}
+          className={tw`bg-gradient-to-r from-blue-200 to-pink-200 ${textSubmit} ${formSubmitButton}`}
         >
           เอาตรง ๆ ค่ะท่าน
         </button>
         <button
-          className={tw`bg-gradient-to-r from-green-200 to-yellow-200 text-2xl py-4 px-6 rounded mx-3 shadow border-1 border-gray-600 hover:shadow-xl hover:text-gray-600`}
+          className={tw`bg-gradient-to-r from-green-200 to-yellow-200 ${textSubmit} ${formSubmitButton}`}
         >
           ค่ะท่าน
         </button>

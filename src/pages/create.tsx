@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import CenterLayout from '../layouts/CenterLayout'
+import CreateQuoteBox from '../components/CreateQuoteBox'
 
 const CreatePage = () => {
   return (
@@ -7,7 +8,7 @@ const CreatePage = () => {
       <Head>
         <title>สร้างวลีเด็ด ๆ – ไม่รู้</title>
       </Head>
-      <span>สร้างวลีเด็ด ๆ</span>
+      <CreateQuoteBox />
     </CenterLayout>
   )
 }
