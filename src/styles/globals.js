@@ -4,6 +4,7 @@ export default css.global`
   main {
     position: relative;
     overflow: hidden !important;
+    padding-bottom: 110px;
   }
 
   main::before {

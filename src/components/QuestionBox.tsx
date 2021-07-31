@@ -7,6 +7,7 @@ import {
   textTitle,
   textInput,
   textSubmit,
+  formInput,
   formSubmitButton,
 } from '../styles/components'
 
@@ -32,7 +33,7 @@ const QuestionBox = ({ setAnswer }: QuestionBoxProp) => {
       <h1 className={tw`${textTitle}`}>ท่านขึ้นโพเดียมแล้ว เชิญนักข่าวถาม</h1>
 
       <input
-        className={tw`py-3 px-2 border mt-5 w-4/5 ${textInput}`}
+        className={tw`w-full ${formInput} mt-5 ${textInput}`}
         type="text"
         placeholder="เมื่อไหร่จะได้วัคซีน ?"
         value={question}

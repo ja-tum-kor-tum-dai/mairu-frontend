@@ -24,7 +24,6 @@ const CreateQuoteBox = () => {
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
       />
-
       <input
         type="text"
         className={tw`${formInput} ${textInput}`}
