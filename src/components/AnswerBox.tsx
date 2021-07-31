@@ -1,11 +1,19 @@
 import { tw } from 'twind'
 
-const AnswerBox = () => {
+interface AnswerBoxProp {
+  quote?: string
+}
+
+const AnswerBox = ({ quote }: AnswerBoxProp) => {
   return (
-    <div className={tw`flex flex-col justify-center items-center`}>
-      <h1 className={tw`text-5xl text-center leading-loose`}>
-        ตอนนี้หลายๆคนคงได้ทราบกันแล้ว ว่าเทนนิสมีอะไรบางอย่างที่ฝ่ายเรารับไม่ได้
-        (และไม่มีวันยอมรับได้)
+    <div
+      className={tw`flex flex-col justify-center items-center sm:mx-10 md:mx-20`}
+    >
+      <h1
+        className={tw`sm:text-2lg md:text-3xl lg:text-4xl my-3 text-center leading-loose`}
+      >
+        {quote ||
+          'ตอนนี้หลายๆคนคงได้ทราบกันแล้ว ว่าเทนนิสมีอะไรบางอย่างที่ฝ่ายเรารับไม่ได้ (และไม่มีวันยอมรับได้)'}
       </h1>
       <div className={tw`my-5`}>
         <button
