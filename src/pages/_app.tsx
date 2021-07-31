@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { setup } from 'twind'
+import globalStyles from '../styles/globals.js'
 
 setup({
   theme: {
@@ -21,6 +22,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           rel="stylesheet"
         />
       </Head>
+      <style jsx global>
+        {globalStyles}
+      </style>
       <Component {...pageProps} />
     </>
   )
