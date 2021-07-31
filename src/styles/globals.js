@@ -19,21 +19,12 @@ export default css.global`
       rgba(255, 255, 255, 0) 341.19deg,
       #fec6ff 395.67deg
     );
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
+    width: 600%;
+    height: 600%;
+    top: -250%;
+    left: -250%;
     animation: rotating-gradient 15s linear infinite;
     z-index: -1;
-  }
-
-  @media (max-width: 767px) {
-    main::before {
-      width: 600%;
-      height: 600%;
-      top: -250%;
-      left: -250%;
-    }
   }
 
   @keyframes rotating-gradient {
