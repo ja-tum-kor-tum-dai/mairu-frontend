@@ -15,6 +15,7 @@
     "twind": "^0.16.16"
   },
   "devDependencies": {
+    "@twind/typescript-plugin": "^0.3.4",
     "@types/react": "17.0.15",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
