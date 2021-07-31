@@ -5,10 +5,18 @@ const Navbar = () => {
     <div
       className={tw`flex justify-center items-center space-x-16 text-xl text-center my-14`}
     >
-      <a href="">ถามคำถามท่าน</a>
-      <a href="">สุ่มวลีเด็ด ๆ</a>
-      <a href="">สร้างวลีเด็ด ๆ</a>
-      <a href="">ไม่รู้ API</a>
+      <a href="" className={tw`hover:text-gray-600`}>
+        ถามคำถามท่าน
+      </a>
+      <a href="" className={tw`hover:text-gray-600`}>
+        สุ่มวลีเด็ด ๆ
+      </a>
+      <a href="" className={tw`hover:text-gray-600`}>
+        สร้างวลีเด็ด ๆ
+      </a>
+      <a href="" className={tw`hover:text-gray-600`}>
+        ไม่รู้ API
+      </a>
     </div>
   )
 }
