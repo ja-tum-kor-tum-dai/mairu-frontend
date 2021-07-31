@@ -23,25 +23,25 @@ export default css.global`
     height: 200%;
     top: -50%;
     left: -50%;
+    animation: rotating-gradient 15s linear infinite;
     z-index: -1;
   }
 
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     main::before {
       width: 600%;
       height: 600%;
       top: -250%;
       left: -250%;
-      animation: rotating-gradient 15s linear infinite;
     }
+  }
 
-    @keyframes rotating-gradient {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+  @keyframes rotating-gradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 `
