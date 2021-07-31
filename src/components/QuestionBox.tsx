@@ -7,7 +7,7 @@ const QuestionBox = () => {
   const [question, setQuestion] = useState('')
 
   return (
-    <div className={tw`flex flex-col justify-center items-center mt-20 px-6`}>
+    <div className={tw`flex flex-col justify-center items-center px-6`}>
       <div className={tw`mb-7`}>
         <Image
           src={prodiumPic}

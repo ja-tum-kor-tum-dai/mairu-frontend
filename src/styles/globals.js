@@ -35,4 +35,12 @@ export default css.global`
       transform: rotate(360deg);
     }
   }
+
+  nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+  }
 `

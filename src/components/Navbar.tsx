@@ -3,8 +3,8 @@ import { tw } from 'twind'
 
 const Navbar = () => {
   return (
-    <div
-      className={tw`flex justify-center items-center space-x-16 text-xl text-center my-14`}
+    <nav
+      className={tw`flex justify-center items-center space-x-16 text-xl text-center justify-self-end`}
     >
       <Link href="/">
         <a className={tw`hover:text-gray-600`}>ถามคำถามท่าน</a>
@@ -18,7 +18,7 @@ const Navbar = () => {
       <a href="" className={tw`hover:text-gray-600`}>
         ไม่รู้ API
       </a>
-    </div>
+    </nav>
   )
 }
 

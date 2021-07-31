@@ -2,7 +2,7 @@ import { tw } from 'twind'
 
 const AnswerBox = () => {
   return (
-    <div className={tw`flex flex-col justify-center items-center mt-20 px-6`}>
+    <div className={tw`flex flex-col justify-center items-center`}>
       <h1 className={tw`text-5xl text-center leading-loose`}>
         ตอนนี้หลายๆคนคงได้ทราบกันแล้ว ว่าเทนนิสมีอะไรบางอย่างที่ฝ่ายเรารับไม่ได้
         (และไม่มีวันยอมรับได้)

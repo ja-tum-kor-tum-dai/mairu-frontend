@@ -1,15 +1,14 @@
 import Head from 'next/head'
+import CenterLayout from '../layouts/CenterLayout'
 
 const CreatePage = () => {
   return (
-    <div>
+    <CenterLayout>
       <Head>
         <title>สร้างวลีเด็ด ๆ – ไม่รู้</title>
       </Head>
-      <main>
-        <span>สร้างวลีเด็ด ๆ</span>
-      </main>
-    </div>
+      <span>สร้างวลีเด็ด ๆ</span>
+    </CenterLayout>
   )
 }
 

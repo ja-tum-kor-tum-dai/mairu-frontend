@@ -1,23 +1,19 @@
 import Head from 'next/head'
 import QuestionBox from '../components/QuestionBox'
 import AnswerBox from '../components/AnswerBox'
-import Navbar from '../components/Navbar'
-import { tw } from 'twind'
 import { useState } from 'react'
+import CenterLayout from '../layouts/CenterLayout'
 
 const HomePage = () => {
   const [answer, setAnswer] = useState('')
 
   return (
-    <div>
+    <CenterLayout>
       <Head>
         <title>ถามคำถามท่าน – ไม่รู้</title>
       </Head>
-      <main className={tw`min-h-screen`}>
-        {answer ? <AnswerBox /> : <QuestionBox />}
-        <Navbar />
-      </main>
-    </div>
+      {answer ? <AnswerBox /> : <QuestionBox />}
+    </CenterLayout>
   )
 }
 
