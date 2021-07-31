@@ -10,7 +10,7 @@ setup({
         sans: 'Charm, cursive',
       },
       lineHeight: {
-        loose: '2.5',
+        loose: '3.25rem',
       },
     },
   },

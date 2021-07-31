@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import CenterLayout from '../layouts/CenterLayout'
+import AnswerBox from '../components/AnswerBox'
 
 const RandomPage = () => {
   return (
@@ -7,7 +8,7 @@ const RandomPage = () => {
       <Head>
         <title>สุ่มวลีเด็ด ๆ – ไม่รู้</title>
       </Head>
-      <span>สุ่มวลีเด็ด ๆ</span>
+      <AnswerBox />
     </CenterLayout>
   )
 }
