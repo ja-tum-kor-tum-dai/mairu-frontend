@@ -1,9 +1,13 @@
 import Image from 'next/image'
 import prodiumPic from '../../public/images/tribune.png'
 import { tw } from 'twind'
-import { useState } from 'react'
+import { useState, Dispatch, SetStateAction } from 'react'
 
-const QuestionBox = () => {
+interface QuestionBoxProp {
+  setAnswer: Dispatch<SetStateAction<string>>
+}
+
+const QuestionBox = ({ setAnswer }: QuestionBoxProp) => {
   const [question, setQuestion] = useState('')
 
   return (

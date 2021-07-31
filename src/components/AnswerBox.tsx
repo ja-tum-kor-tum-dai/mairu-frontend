@@ -1,10 +1,12 @@
 import { tw } from 'twind'
+import { Dispatch, SetStateAction } from 'react'
 
 interface AnswerBoxProp {
   quote?: string
+  resetAnswer: Dispatch<SetStateAction<string>>
 }
 
-const AnswerBox = ({ quote }: AnswerBoxProp) => {
+const AnswerBox = ({ quote, resetAnswer }: AnswerBoxProp) => {
   return (
     <div
       className={tw`flex flex-col justify-center items-center sm:mx-10 md:mx-20`}
@@ -18,6 +20,7 @@ const AnswerBox = ({ quote }: AnswerBoxProp) => {
       <div className={tw`my-5`}>
         <button
           className={tw`bg-gradient-to-r from-green-200 to-pink-200 text-2xl py-4 px-6 rounded mx-3 shadow border-1 border-gray-600 hover:shadow-xl hover:text-gray-600`}
+          onClick={() => resetAnswer('')}
         >
           ค่ะท่าน
         </button>

@@ -12,7 +12,11 @@ const HomePage = () => {
       <Head>
         <title>ถามคำถามท่าน – ไม่รู้</title>
       </Head>
-      {answer ? <AnswerBox /> : <QuestionBox />}
+      {answer ? (
+        <AnswerBox quote={answer} resetAnswer={setAnswer} />
+      ) : (
+        <QuestionBox setAnswer={setAnswer} />
+      )}
     </CenterLayout>
   )
 }
