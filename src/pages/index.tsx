@@ -5,13 +5,13 @@ import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import prodiumPic from '../../public/images/tribune.png'
 
-const Home = () => {
+const HomePage = () => {
   const [answer, setAnswer] = useState('')
 
   return (
     <div>
       <Head>
-        <title>ไม่รู้</title>
+        <title>ถามคำถามท่าน – ไม่รู้</title>
       </Head>
       <main>
         <div className={tw`flex flex-col justify-center items-center mt-20`}>
@@ -57,4 +57,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage
