@@ -53,7 +53,7 @@ const QuestionBox = ({ setAnswer }: QuestionBoxProp) => {
           className={tw`bg-gradient-to-r from-green-200 to-yellow-200 ${textSubmit} ${formSubmitButton}`}
           onClick={async () => {
             if (question) {
-              const data = await askQuestion(question)
+              const data = await askQuestion()
               setAnswer(data.quote)
             }
           }}

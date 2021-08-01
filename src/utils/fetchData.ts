@@ -1,24 +1,12 @@
 type askQuestionData = {
   quote: string
-  quote_by: string
-  ref: string
-  media_url: string
-  media_type: string
 }
 
-const URL = ''
+const URL = 'https://mairu-backend.herokuapp.com/'
 
-export const askQuestion = async (
-  question: string
-): Promise<askQuestionData> => {
+export const askQuestion = async (): Promise<askQuestionData> => {
   const response = await fetch(URL || '/api', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      question: question,
-    }),
+    method: 'GET',
   })
 
   const data = response.json()
