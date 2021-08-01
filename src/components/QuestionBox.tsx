@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import questionPic from '../../public/android-chrome-192x192.png'
+import questionPic from '../../public/images/mairuu.png'
 import { tw } from 'twind'
 import { useState, Dispatch, SetStateAction } from 'react'
 import {
@@ -11,6 +11,7 @@ import {
   formSubmitButton,
   transitionZoom,
 } from '../styles/components'
+import { askQuestion } from '../utils/fetchData'
 
 interface QuestionBoxProp {
   setAnswer: Dispatch<SetStateAction<string>>
@@ -50,6 +51,12 @@ const QuestionBox = ({ setAnswer }: QuestionBoxProp) => {
         </button> */}
         <button
           className={tw`bg-gradient-to-r from-green-200 to-yellow-200 ${textSubmit} ${formSubmitButton}`}
+          onClick={async () => {
+            if (question) {
+              const data = await askQuestion(question)
+              setAnswer(data.quote)
+            }
+          }}
         >
           ถามเลย
         </button>
