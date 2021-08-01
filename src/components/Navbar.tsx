@@ -19,7 +19,10 @@ const Navbar = () => {
         <Link href="/create">
           <a className={tw`${textNavbar}`}>สร้างวลีเด็ด ๆ</a>
         </Link> */}
-        <a href="https://github.com/ja-tum-kor-tum-dai/mairu-frontend" className={tw`${textNavbar}`}>
+        <a
+          href="https://github.com/ja-tum-kor-tum-dai/mairu-backend"
+          className={tw`${textNavbar}`}
+        >
           ไม่รู้เอพีไอ
         </a>
       </div>
