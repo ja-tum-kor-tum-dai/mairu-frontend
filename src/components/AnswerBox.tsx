@@ -20,11 +20,10 @@ const AnswerBox = ({ quote, resetAnswer }: AnswerBoxProp) => {
     // when fetching
     <div className={tw`${container} sm:mx-10 md:mx-20`}>
       <h1 className={tw`${textTitle} my-3 leading-loose`}>
-        {quote ||
-          'ตอนนี้หลายๆคนคงได้ทราบกันแล้ว ว่าเทนนิสมีอะไรบางอย่างที่ฝ่ายเรารับไม่ได้ (และไม่มีวันยอมรับได้)'}
+        {quote || 'ไม่รู้' + 'ๆ'.repeat(Math.random() * 10)}
       </h1>
       <span className={tw`${textBase}`}>
-        ...(ชื่อผู้กล่าว || “ใครสักคน”)... ได้กล่าวเอาไว้
+        ...ใครสักคนได้กล่าวเอาไว้
       </span>
       <div className={tw`my-5`}>
         <button
@@ -35,7 +34,7 @@ const AnswerBox = ({ quote, resetAnswer }: AnswerBoxProp) => {
             }
           }}
         >
-          ค่ะท่าน
+          ถามใหม่
         </button>
       </div>
     </div>
