@@ -6,12 +6,12 @@ type askQuestionData = {
   media_type: string
 }
 
-const URL = 'http://localhost:3000'
+const URL = ''
 
 export const askQuestion = async (
   question: string
 ): Promise<askQuestionData> => {
-  const response = await fetch(`${URL}/api`, {
+  const response = await fetch(URL || '/api', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
