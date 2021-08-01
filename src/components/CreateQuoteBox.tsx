@@ -10,9 +10,32 @@ import {
 } from '../styles/components'
 
 const CreateQuoteBox = () => {
-  const [question, setQuestion] = useState('')
+  const [quote, setQuote] = useState('')
   const [who, setWho] = useState('')
   const [source, setSource] = useState('')
+
+  const postNewQuote = async () => {
+    const postResponse = await fetch(`/api/quote`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        quote: quote,
+        quote_by: who,
+        ref: source,
+        media_url: '',
+        media_type: 'text',
+      }),
+    })
+
+    if (postResponse.status === 200) {
+      console.log('Successfully posted quote')
+      console.log(postResponse.json())
+    } else {
+      console.error('Error posting quote')
+    }
+  }
 
   return (
     <div className={tw`${container}`}>
@@ -21,8 +44,8 @@ const CreateQuoteBox = () => {
       <textarea
         className={tw`sm:h-20 lg:h-1/5 min-h-1/5 ${formInput} ${textInput} mt-5`}
         placeholder="จำไม่ได้ๆๆๆๆ"
-        value={question}
-        onChange={(e) => setQuestion(e.target.value)}
+        value={quote}
+        onChange={(e) => setQuote(e.target.value)}
       />
       <input
         type="text"
@@ -42,6 +65,7 @@ const CreateQuoteBox = () => {
       <div className={tw`my-5`}>
         <button
           className={tw`bg-gradient-to-r from-yellow-200 to-blue-200 ${textSubmit} ${formSubmitButton}`}
+          onClick={postNewQuote}
         >
           ได้กล่าวเอาไว้
         </button>
